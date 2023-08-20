@@ -5,8 +5,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return render_template('index.html', \
-		title = 'index.html')
+	return render_template('index.html', title = 'index.html')
 
-if __name__ == '__main__':
-	app.run()
+@app.route('/prev/')
+def prev():
+	return render_template('prev.html', title = 'prev.html')
+
+@app.route('/next/')
+def next():
+	return render_template('next.html', title = 'next.html')
