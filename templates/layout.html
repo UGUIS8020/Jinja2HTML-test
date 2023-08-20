@@ -12,25 +12,17 @@
 		<div class="container">
 			<h1 class="mt-4">テンプレート継承({{ title }})</h1>
 			
-			<!-- ヘッダー -->
-			<header class="my-3">
-				<ul class="nav nav-pills">
-					<li class="nav-item"><a class="nav-link" href="/prev/">prev.html</a></li>
-					<li class="nav-item"><a class="nav-link active" href="/">index.html</a></li>
-					<li class="nav-item"><a class="nav-link" href="/next/">next.html</a></li>
-				</ul>
-			</header>
+				<!-- ヘッダー -->
+				{% include "header.html" %}
 
-			<!-- メインコンテンツ -->
-			{%- block content %}{% endblock %}
-		  
-			<!-- フッター -->
-			<footer class="bg-dark text-light">
-				<p class="text-center">Copyright 2020 tanu.</p>
-			</footer>
-			
+				<!-- メインコンテンツ -->
+				{%- block content %}{% endblock %}
+					
+				<!-- フッター -->
+				{% include "footer.html" %}
+						
 		</div>
-		
+			
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
