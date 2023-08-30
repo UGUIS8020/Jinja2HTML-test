@@ -14,3 +14,6 @@ def prev():
 @app.route('/next/')
 def next():
 	return render_template('next.html', next = True, title = 'next.html')
+
+if __name__ == '__main__':
+    app.run()
